@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Детальна стаття</title>
+    <style>
+        body {
+            background-color: #2a2a2a;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: left;
+            color: #ffcc00;
+            margin-bottom: 30px;
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeIn 1s forwards;
+        }
+
+        p {
+            font-size: 18px;
+            color: #ddd;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeIn 1.5s forwards;
+        }
+
+        .btn {
+            padding: 10px 15px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-danger {
+            background-color: #e74c3c;
+            border: none;
+        }
+
+        .btn-success {
+            background-color: #27ae60;
+            border: none;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+            transform: scale(1.05);
+        }
+
+        .btn-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            right: 0;
+            display: flex;
+            gap: 15px;
+            background-color: #1c1c1c;
+            padding: 10px 20px;
+            border-bottom-left-radius: 15px;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-item {
+            color: #ffcc00;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .header-item:hover {
+            color: #ffdd33;
+        }
+
+        .date {
+            margin-top: 10px;
+            color: #bbb;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <a href="/about" class="header-item">Про мене</a>
+        <a href="/support" class="header-item">Технічна підтримка</a>
+        <a href="/posts" class="header-item">Статті</a>
+    </div>
+
+    <div class="container mt-5">
+        <h1>{{ article.title }}</h1>
+        <p>{{ article.text }}</p>
+        <p class="date"><b>Дата: {{ article.date.date() }}</b></p>
+        <div class="btn-container">
+            <a href="/posts/{{ article.id }}/del" class="btn btn-danger">Видалити</a>
+            <a href="/posts/{{ article.id }}/up" class="btn btn-success">Редагувати</a>
+        </div>
+    </div>
+
+</body>
+</html>

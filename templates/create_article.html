@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Додати статтю</title>
+    <style>
+        body {
+            background-color: #2a2a2a;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffcc00;
+            margin-bottom: 30px;
+        }
+
+        #title {
+            background-color: #1c1c1c;
+            color: #fff;
+            border: 2px solid #ffcc00;
+            padding: 10px;
+            width: 60%;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        #intro {
+            background-color: #1c1c1c;
+            color: #fff;
+            border: 2px solid #ffcc00;
+            padding: 10px;
+            width: 80%;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        #text {
+            background-color: #1c1c1c;
+            color: #fff;
+            border: 2px solid #ffcc00;
+            padding: 10px;
+            width: 100%;
+            border-radius: 10px;
+            height: 150px;
+            transition: all 0.3s ease;
+        }
+
+        #title:focus, #intro:focus, #text:focus {
+            border-color: #ffdd33;
+            transform: scale(1.05);
+        }
+
+        .btn-success {
+            background-color: #ffcc00;
+            border: none;
+            color: #2a2a2a;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            margin: 20px auto;
+        }
+
+        .btn-success:hover {
+            background-color: #ffdd33;
+            transform: scale(1.1);
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            right: 0;
+            display: flex;
+            gap: 15px;
+            background-color: #1c1c1c;
+            padding: 10px 20px;
+            border-bottom-left-radius: 15px;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-item {
+            color: #ffcc00;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .header-item:hover {
+            color: #ffdd33;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="header">
+        <a href="/about" class="header-item">Про мене</a>
+        <a href="/support" class="header-item">Технічна підтримка</a>
+        <a href="/posts" class="header-item">Статті</a>
+    </div>
+
+
+    <div class="container mt-5">
+        <h1>Додати статтю</h1>
+        <form method="post">
+            <input type="text" name="title" id="title" class='form-control' placeholder="Введіть назву" required><br>
+            <textarea name="intro" id="intro" class='form-control' placeholder="Введіть анонс" required></textarea><br>
+            <textarea name="text" id="text" class='form-control' placeholder="Введіть основний текст" required></textarea><br>
+            <input type="submit" class='btn btn-success' value="Відправити">
+        </form>
+    </div>
+
+</body>
+</html>

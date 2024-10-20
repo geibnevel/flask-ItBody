@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    color: #333;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #212529;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+    width: 85%;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.skill-item {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    transform: translateX(-150%);
+    opacity: 0;
+    animation: slideIn 1s ease forwards;
+}
+
+.skill-item:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.skill-item:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.skill-item:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
+.skill-item:nth-child(4) {
+    animation-delay: 2s;
+}
+
+.skill-item:nth-child(5) {
+    animation-delay: 2.5s;
+}
+
+.skill-item:nth-child(6) {
+    animation-delay: 3s;
+}
+
+.skill-item h2 {
+    color: #212529;
+    margin-bottom: 15px;
+    font-size: 22px;
+    text-align: left;
+}
+
+.skill-item p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.skill-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    background-color: #212529;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-150%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

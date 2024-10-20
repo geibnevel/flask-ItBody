@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Cторінка про мене
+{% endblock %}
+
+{% block body %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+<div class="container">
+<section id="services">
+        <header>
+    Вміння та Навички
+</header>
+
+<div class="container">
+    <div class="skills-grid">
+        <div class="skill-item">
+            <i class='bx bxl-html5' ></i>
+            <i class='bx bxl-css3' ></i>
+            <i class='bx bxl-nodejs' ></i>
+            <h2>Розробка веб-сайтів</h2>
+            <p>Мені подобається займатись розробкою веб-сайтів, я практикуюсь та постійно намагаюсь розвиватись у цьому напрямку і вивчати нові технології.</p>
+        </div>
+        <div class="skill-item">
+            <i class='bx bxs-joystick'></i>
+            <i class='bx bx-football' ></i>
+            <i class='bx bxs-tennis-ball' ></i>
+            <h2>Захоплення та хоббі</h2>
+            <p>На данний момент розвиваюсь в сфері Frontend-Developer, також полюбляю грати в настільний теніс, футбол, волейбол .</p>
+        </div>
+        <div class="skill-item">
+            <i class='bx bx-user-voice' ></i>
+            <i class='bx bx-book-reader' ></i>
+            <i class='bx bxs-chat' ></i>
+            <h2>Англійська мова</h2>
+            <p>Володію англійською на рівні B1. Здатен розуміти тексти, розмовну мову носіїв і говорити у більшості випадків.</p>
+        </div>
+        <div class="skill-item">
+            <i class='bx bxs-trophy' ></i>
+            <i class='bx bxs-medal' ></i>
+            <i class='bx bx-slideshow' ></i>
+            <h2>Досягнення</h2>
+            <p>Кілька разів займав призові місця в онлайн турнірах по різним іграм, а також брав участь в марафоні, який проходив у Львові, також маю дуже багато проєктів на пайтоні здебільшого багато графічних проєктів різних анімацій ігр і тд.</p>
+        </div>
+        <div class="skill-item">
+            <i class='bx bxs-phone' ></i>
+            <i class='bx bx-male-female' ></i>
+            <i class='bx bx-message-dots' ></i>
+            <h2>Комунікабельність</h2>
+            <p>Я вважаю себе досить комунікабельним, можу поговорити з людиною на багато різних тем дуже кооперативний можу адаптуватись до любої компанії.</p>
+        </div>
+        <div class="skill-item">
+            <i class='bx bx-check' ></i>
+            <i class='bx bxs-bulb' ></i>
+            <i class='bx bxs-wrench' ></i>
+            <h2>Бажання вивчати нове</h2>
+            <p>Я завжди відкритий до нового, прагну розширити свій запас знань і підвищити рівень вже набутих навичок, в різних сферах.</p>
+        </div>
+    </div>
+</div>
+    </section>
+</div>
+{% endblock %}

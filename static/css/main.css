@@ -1,0 +1,67 @@
+style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .faq {
+            margin-bottom: 30px;
+        }
+        .faq h2 {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+        .faq p {
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .form-container input, .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
+/style>
